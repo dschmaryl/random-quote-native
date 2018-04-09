@@ -41,13 +41,17 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.quoteText}>{this.state.quote}</Text>
-        <Text style={styles.authorText}>{this.state.author}</Text>
-        <TouchableHighlight onPress={() => this.fetchQuote()}>
-          <View style={styles.newQuoteButton}>
-            <Text style={styles.newQuoteButtonText}>New Quote</Text>
-          </View>
-        </TouchableHighlight>
+        <View style={styles.quoteBox}>
+          <Text style={styles.quoteText}>{this.state.quote}</Text>
+        
+          <Text style={styles.authorText}>{this.state.author}</Text>
+
+          <TouchableHighlight onPress={() => this.fetchQuote()}>
+            <View style={styles.newQuoteButton}>
+              <Text style={styles.newQuoteButtonText}>New Quote</Text>
+            </View>
+          </TouchableHighlight>
+        </View>
       </View>
     );
   }
@@ -57,27 +61,36 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    backgroundColor: '#444',
+    backgroundColor: '#555',
     alignItems: 'center',
     justifyContent: 'center'
   },
+  quoteBox: {
+    width: 340,
+    padding: 10,
+    paddingBottom: 30,
+    backgroundColor: '#fff',
+    borderRadius: 6,
+    alignItems: 'center'
+  },
   quoteText: {
-    color: '#eee',
+    color: '#555',
     fontSize: 30
   },
   authorText: {
-    color: '#eee',
-    fontSize: 20,
+    color: '#555',
+    fontSize: 24,
+    fontStyle: 'italic',
     paddingTop: 20,
     paddingBottom: 50
   },
   newQuoteButton: {
     padding: 10,
-    backgroundColor: '#eee',
+    backgroundColor: '#555',
     borderRadius: 4
   },
   newQuoteButtonText: {
-    color: '#444',
+    color: '#fff',
     fontSize: 20
   }
 });
