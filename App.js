@@ -1,12 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableHighlight,
-  Alert
-} from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 
 export default class App extends React.Component {
   constructor(props) {
