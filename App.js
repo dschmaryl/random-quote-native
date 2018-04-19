@@ -12,15 +12,9 @@ export default class App extends React.Component {
   }
 
   fetchQuote() {
-    const url = 'https://andruxnet-random-famous-quotes.p.mashape.com';
-    const config = {
-      headers: {
-        'X-Mashape-Key': 'SmLRUtwLsPmshE0v9lpkDNiikRdup1qnUJRjsn6Mt75bdzkRfz',
-        'Content-Type': 'application/x-www-form-urlencoded',
-        Accept: 'application/json'
-      }
-    };
-    axios.get(url, config).then(response => {
+    const url =
+      'https://random-quote-generator.herokuapp.com/api/quotes/random';
+    axios.get(url).then(response => {
       this.setState({
         quote: response.data.quote,
         author: '- ' + response.data.author
