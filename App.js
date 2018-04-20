@@ -37,7 +37,7 @@ export default class App extends React.Component {
       '#17324f',
       '#4f0d3c',
       '#5e114c'
-    ][Math.floor(Math.random(0, 3) * 9)];
+    ][Math.floor(Math.random() * 9)];
 
     return (
       <View style={[styles.container, { backgroundColor: color }]}>
